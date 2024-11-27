@@ -1,4 +1,4 @@
-﻿namespace NumberCheck.Interfaces;
+﻿namespace NumberCheckConsole.Interfaces;
 
 public interface IRandomGeneratorService
 {

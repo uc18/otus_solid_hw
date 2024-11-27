@@ -1,4 +1,4 @@
-﻿namespace NumberCheck;
+﻿namespace NumberCheckConsole.Options;
 
 public class ApplicationRandomNumber
 {

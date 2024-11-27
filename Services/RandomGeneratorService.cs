@@ -1,15 +1,15 @@
-﻿using Microsoft.Extensions.Options;
-using NumberCheck.Interfaces;
+﻿using NumberCheckConsole.Interfaces;
 
-namespace NumberCheck.Services;
+
+namespace NumberCheckConsole.Services;
 
 public class RandomGeneratorService : IRandomGeneratorService
 {
     private readonly int _randomNumber;
-    public RandomGeneratorService(IOptions<ApplicationRandomNumber> options)
+    public RandomGeneratorService(int minNumber, int maxNumber)
     {
         var random = new Random();
-        _randomNumber = random.Next(options.Value.RandomNumberMin, options.Value.RandomNumberMax);
+        _randomNumber = random.Next(minNumber, maxNumber);
     }
     public int GetRandomNumber()
     {

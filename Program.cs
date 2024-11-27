@@ -1,35 +1,22 @@
-using NumberCheck.Interfaces;
-using NumberCheck.Services;
+﻿using NumberCheckConsole.Extension;
+using NumberCheckConsole.Interfaces;
+using NumberCheckConsole.Options;
+using NumberCheckConsole.Services;
 
-namespace NumberCheck;
+namespace NumberCheckConsole;
 
-public class Program
+class Program
 {
-    public static void Main(string[] args)
+    static void Main()
     {
-        var builder = WebApplication.CreateBuilder(args);
+        var configuration = ConfigurationExtension.GetConfiguration();
 
-        // Add services to the container.
+        var applicationOptions =
+            ConfigurationExtension.GetOptions<ApplicationRandomNumber>(configuration, nameof(ApplicationRandomNumber));
 
-        builder.Services.Configure<ApplicationRandomNumber>(builder.Configuration.GetSection(nameof(ApplicationRandomNumber)));
-        builder.Services.AddSingleton<IRandomGeneratorService, RandomGeneratorService>();
-        builder.Services.AddSingleton<IUserService, UserService>();
-        builder.Services.AddControllers();
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
-
-        var app = builder.Build();
-
-        // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
-
-        app.MapControllers();
-
-        app.Run();
+        IRandomGeneratorService t = new RandomGeneratorService(applicationOptions.RandomNumberMin, applicationOptions.RandomNumberMax);
+        var randomNumberForGame = t.GetRandomNumber();
+        IPlayService game = new PlayService(randomNumberForGame, applicationOptions.AttemptedNumber);
+        game.GameStart();
     }
 }
