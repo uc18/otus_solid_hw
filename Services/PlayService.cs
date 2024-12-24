@@ -8,21 +8,24 @@ public class PlayService : IPlayService
     private int _attempts;
     private int _stateAttempts;
     private readonly ILoggerService _logger;
+    private readonly IInputService _inputService;
 
     public PlayService(int number, int attempts)
     {
         _randomNumber = number;
         _attempts = attempts;
         _logger = new LoggerService();
+        _inputService = new InputService();
     }
     public void GameStart()
     {
         _logger.Information("Game started!");
+        _logger.Information($"You have: {_attempts}");
         var gameWasGoing = true;
         do
         {
             _logger.Information("Press number to check");
-            var clientNumber = Console.ReadLine();
+            var clientNumber = _inputService.GetNumberFromInput();
             if (int.TryParse(clientNumber, out var number))
             {
                 if (number > _randomNumber && _stateAttempts != _attempts)
