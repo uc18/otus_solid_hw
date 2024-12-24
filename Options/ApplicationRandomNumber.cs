@@ -1,6 +1,6 @@
 ﻿namespace NumberCheckConsole.Options;
 
-public class ApplicationRandomNumber
+public record ApplicationRandomNumber
 {
     public int AttemptedNumber { get; init; }
     public int RandomNumberMin { get; init; }

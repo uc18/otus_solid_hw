@@ -14,8 +14,8 @@ class Program
         var applicationOptions =
             ConfigurationExtension.GetOptions<ApplicationRandomNumber>(configuration, nameof(ApplicationRandomNumber));
 
-        IRandomGeneratorService t = new RandomGeneratorService(applicationOptions.RandomNumberMin, applicationOptions.RandomNumberMax);
-        var randomNumberForGame = t.GetRandomNumber();
+        IRandomGeneratorService randomService = new RandomGeneratorService(applicationOptions.RandomNumberMin, applicationOptions.RandomNumberMax);
+        var randomNumberForGame = randomService.GetRandomNumber();
         IPlayService game = new PlayService(randomNumberForGame, applicationOptions.AttemptedNumber);
         game.GameStart();
     }
