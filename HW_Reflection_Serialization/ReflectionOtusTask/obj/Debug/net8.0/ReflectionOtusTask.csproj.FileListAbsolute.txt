@@ -1,0 +1,14 @@
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\bin\Debug\net8.0\ReflectionOtusTask.exe
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\bin\Debug\net8.0\ReflectionOtusTask.deps.json
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\bin\Debug\net8.0\ReflectionOtusTask.runtimeconfig.json
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\bin\Debug\net8.0\ReflectionOtusTask.dll
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\bin\Debug\net8.0\ReflectionOtusTask.pdb
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\obj\Debug\net8.0\ReflectionOtusTask.GeneratedMSBuildEditorConfig.editorconfig
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\obj\Debug\net8.0\ReflectionOtusTask.AssemblyInfoInputs.cache
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\obj\Debug\net8.0\ReflectionOtusTask.AssemblyInfo.cs
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\obj\Debug\net8.0\ReflectionOtusTask.csproj.CoreCompileInputs.cache
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\obj\Debug\net8.0\ReflectionOtusTask.dll
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\obj\Debug\net8.0\refint\ReflectionOtusTask.dll
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\obj\Debug\net8.0\ReflectionOtusTask.pdb
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\obj\Debug\net8.0\ReflectionOtusTask.genruntimeconfig.cache
+G:\Git\ReflectionOtusTask\ReflectionOtusTask\obj\Debug\net8.0\ref\ReflectionOtusTask.dll
