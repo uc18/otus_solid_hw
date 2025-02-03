@@ -1,12 +1,23 @@
-﻿namespace ReflectionOtusTask;
+﻿using System.Text.Json.Serialization;
+
+namespace ReflectionOtusTask;
 
 public class SomeSerializationClass
 {
-    public int i1;
-    public int i2;
-    public int i3;
-    public int i4;
-    public int i5;
+    [JsonPropertyName("ii")]
+    public int i1 { get; set; }
+
+    [JsonPropertyName("i2")]
+    public int i2 { get; set; }
+
+    [JsonPropertyName("i3")]
+    public int i3 { get; set; }
+
+    [JsonPropertyName("i4")]
+    public int i4 { get; set; }
+
+    [JsonPropertyName("i5")]
+    public int i5 { get; set; }
 
     public SomeSerializationClass Get()
     {
